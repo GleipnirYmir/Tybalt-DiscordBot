@@ -18,8 +18,8 @@ class TybaltMegaserver:
         !na
         """
         author = ctx.message.author
-        role_add = self.get_role_by_name(ctx.server, 'na'):
-        role_remove = self.get_role_by_name(ctx.server, 'eu'):
+        role_add = self.get_role_by_name(ctx.server, 'na')
+        role_remove = self.get_role_by_name(ctx.server, 'eu')
         try:
             await self.bot.remove_roles(author, role_remove)
             await self.bot.add_roles(author, role_add)
@@ -38,8 +38,8 @@ class TybaltMegaserver:
         !eu
         """
         author = ctx.message.author
-        role_add = self.get_role_by_name(ctx.server, 'eu'):
-        role_remove = self.get_role_by_name(ctx.server, 'na'):
+        role_add = self.get_role_by_name(ctx.server, 'eu')
+        role_remove = self.get_role_by_name(ctx.server, 'na')
         try:
             await self.bot.remove_roles(author, role_remove)
             await self.bot.add_roles(author, role_add)
@@ -52,8 +52,8 @@ class TybaltMegaserver:
 
     def get_role_by_name(server, name):
         roles = server.roles
-        for role in roles
-            if (role.name.lower() == name.lower())
+        for role in roles:
+            if role.name.lower() == name.lower():
                 return role
 
 
