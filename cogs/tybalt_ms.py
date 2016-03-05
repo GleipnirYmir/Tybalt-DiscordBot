@@ -50,7 +50,7 @@ class TybaltMegaserver:
             print(e)
             await self.bot.say("Something went wrong.")
 
-    def get_role_by_name(server, name):
+    def get_role_by_name(self, server, name):
         roles = server.roles
         for role in roles:
             if role.name.lower() == name.lower():
