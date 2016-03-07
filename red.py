@@ -83,8 +83,9 @@ async def send_cmd_help(ctx):
 async def load(*, module : str):
     """Loads a module
 
-    Example: load cogs.mod"""
+    Example: load mod"""
     module = module.strip()
+    if "cogs." not in module: module = "cogs." + module
     if not module in list_cogs():
         await bot.say("That module doesn't exist.")
         return
@@ -101,8 +102,9 @@ async def load(*, module : str):
 async def unload(*, module : str):
     """Unloads a module
 
-    Example: unload cogs.mod"""
+    Example: unload mod"""
     module = module.strip()
+    if "cogs." not in module: module = "cogs." + module
     if not module in list_cogs():
         await bot.say("That module doesn't exist.")
         return
@@ -119,8 +121,9 @@ async def unload(*, module : str):
 async def _reload(*, module : str):
     """Reloads a module
 
-    Example: reload cogs.mod"""
+    Example: reload mod"""
     module = module.strip()
+    if "cogs." not in module: module = "cogs." + module
     if not module in list_cogs():
         await bot.say("That module doesn't exist.")
         return
