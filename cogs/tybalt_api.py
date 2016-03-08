@@ -14,7 +14,7 @@ class TybaltApi:
         self.api_paths = fileIO("data/tybalt/api.json", "load")
 
     @commands.command(pass_context=True, no_pm=True)
-    async def skill(self, ctx, skill:str):
+    async def skill(self, ctx, *skill):
         """Describe a skill
 
         Example:
