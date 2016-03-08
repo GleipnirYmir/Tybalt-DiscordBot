@@ -24,5 +24,5 @@ class TybaltApi:
         await self.bot.say(response);
 
 def setup(bot):
-    n = TybaltMegaserver(bot)
+    n = TybaltApi(bot)
     bot.add_cog(n)
