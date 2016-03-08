@@ -21,7 +21,7 @@ class TybaltApi:
         !skill Fireball
         """
         path = self.api_paths['skill'];
-        response = subprocess.check_output(["php", path] + list(skill]));
+        response = subprocess.check_output(["php", path] + list(skill));
         await self.bot.say(response.decode());
 
 def setup(bot):
